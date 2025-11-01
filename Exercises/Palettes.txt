@@ -1,0 +1,13 @@
+Palettes för Seaborn:
+
+deep
+bright
+muted
+pastel
+colorblind
+blues_d
+dark
+rocket
+viridis
+crest
+magma
