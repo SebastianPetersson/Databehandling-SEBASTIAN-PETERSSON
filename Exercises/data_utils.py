@@ -15,7 +15,7 @@ def plot_missing_values(df):
     #     print('No values are missing in this column: {df.column}')
     #     return
 
-    plt.figure(figsize=(8,6))
+    plt.figure(figsize=(5,4))
     sns.barplot(x = missing_counts.index, y = missing_counts.values, palette='rocket')
     plt.xlabel('Column')
     plt.ylabel('Amount of missing data')
