@@ -36,8 +36,8 @@ def convert_columns_to_int(df, columns):
     return df
     
 def convert_columns_to_float(df, columns):
-    """A tool which converts your column objects to integers.
-    columns_to_int(df, columns), set df to your dataframe and a list containing your column names as columns."""
+    """A tool which converts your column objects to floats.
+    columns_to_float(df, columns), set df to your dataframe and a list containing your column names as columns."""
 
     for column in columns:
         df[column] = (df[column]
