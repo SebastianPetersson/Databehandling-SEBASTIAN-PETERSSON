@@ -21,3 +21,29 @@ def plot_missing_values(df):
     plt.ylabel('Amount of missing data')
     plt.tight_layout()
 
+def convert_columns_to_int(df, columns):
+    """A tool which converts your column objects to integers.
+    columns_to_int(df, columns), set df to your dataframe and a list containing your column names as columns."""
+
+    for column in columns:
+        df[column] = (df[column]
+                      .astype(str)
+                      .str.replace(' ', '', regex = False)
+                      .str.replace(',', '.', regex = False)
+                      .str.replace('\xa0', '', regex = False)
+                      .astype(float)
+                      .astype(int))
+    return df
+    
+def convert_columns_to_float(df, columns):
+    """A tool which converts your column objects to integers.
+    columns_to_int(df, columns), set df to your dataframe and a list containing your column names as columns."""
+
+    for column in columns:
+        df[column] = (df[column]
+                      .astype(str)
+                      .str.replace(' ', '', regex = False)
+                      .str.replace(',', '.', regex = False)
+                      .str.replace('\xa0', '', regex = False)
+                      .astype(float))
+    return df
